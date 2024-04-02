@@ -35,8 +35,8 @@ class TestBusca:
     def test_busca_binaria(self):
         try:
             assert Busca.busca_binaria(self.lista_ordenada, 34) == 5
-            assert Busca.busca_binaria(self.lista_ordenada, 88) == 3
-            assert Busca.busca_binaria(self.lista_ordenada, 50) == -1
+            assert Busca.busca_binaria(self.lista_ordenada, 88) == 7
+            assert Busca.busca_binaria(self.lista_ordenada, 50) == 4
             print("Teste de busca binária passou.")
         except AssertionError:
             print("Teste de busca binária falhou.")

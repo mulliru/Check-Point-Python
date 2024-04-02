@@ -5,7 +5,7 @@ from algoritmos.ordenacao import Ordenacao
 
 class TesteOrdenacao:
     def __init__(self) -> None:
-        self.dicionario_de_listas = {
+        self.conjunto_listas = {
         "lista ordenada crescente": [3, 7, 33, 59, 71],
         "lista não ordenada": [71, 7, 3, 9, 7],
         "lista ordenada decrescente": [71, 59, 33, 7, 3],
@@ -13,35 +13,38 @@ class TesteOrdenacao:
         "lista de elemento único": [42],
         "lista de elementos repetidos": [3, 7, 3, 9, 7]
     }
-    #bubble sort
+    #teste do bubble sort
     def test_bs(self):
-        for nome_lista, lista in self.dicionario_de_listas.items():
+        for nome_lista, lista in self.conjunto_listas.items():
             Ordenacao.bubble_sort(lista)
-            print(f"Resultado\n {nome_lista}: {lista}")
-    #selection sort
+            print(f"O resultado para a lista é:\n {nome_lista}: {lista}")
+            
+    #teste do selection sort
     def test_ss(self):
-        for nome_lista, lista in self.dicionario_de_listas.items():
+        for nome_lista, lista in self.conjunto_listas.items():
             lista_copy = lista[:]
             Ordenacao.selection_sort(lista_copy)
-            print(f"Resultado\n {nome_lista}: {lista_copy}")
-    #insertion sort
+            print(f"O resultado para a lista é:\n {nome_lista}: {lista_copy}")
+            
+    #teste do insertion sort
     def test_is(self):
-        for nome_lista, lista in self.dicionario_de_listas.items():
+        for nome_lista, lista in self.conjunto_listas.items():
             lista_copy = lista[:]
             Ordenacao.insertion_sort(lista_copy)
-            print(f"Resultado\n {nome_lista}: {lista_copy}")
-    #merge sort
+            print(f"O resultado para a lista é:\n {nome_lista}: {lista_copy}")
+    #teste do merge sort
     def test_ms(self):
-        for nome_lista, lista in self.dicionario_de_listas.items():
+        for nome_lista, lista in self.conjunto_listas.items():
             lista_copy = lista[:]
             Ordenacao.merge_sort(lista_copy)
-            print(f"Resultado\n {nome_lista}: {lista_copy}")
-    #quick sort
+            print(f"O resultado para a lista é:\n {nome_lista}: {lista_copy}")
+            
+    #teste do quick sort
     def test_qs(self):
-        for nome_lista, lista in self.dicionario_de_listas.items():
+        for nome_lista, lista in self.conjunto_listas.items():
             lista_copy = lista[:]
             Ordenacao.quick_sort(lista_copy)
-            print(f"Resultado\n {nome_lista}: {lista_copy}")
+            print(f"O resultado para a lista é:\n {nome_lista}: {lista_copy}")
 
     def run_tests(self):
         print("\nTeste Bubble Sort:\n")
