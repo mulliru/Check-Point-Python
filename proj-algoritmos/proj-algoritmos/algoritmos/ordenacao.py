@@ -35,3 +35,17 @@ class Ordenacao:
                 j -= 1
             lista[j + 1] = chave
         return lista
+    
+        ## merge sort
+    @staticmethod
+    def merge_sort(lista):
+        if len(lista) <= 1:
+            return lista
+        meio = len(lista) // 2
+        esquerda = lista[:meio]
+        direita = lista[meio:]
+        
+        esquerda = Ordenacao.merge_sort(esquerda)
+        direita = Ordenacao.merge_sort(direita)
+        
+        return Ordenacao.merge(esquerda, direita)
