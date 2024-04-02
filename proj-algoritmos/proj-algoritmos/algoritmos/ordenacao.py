@@ -62,3 +62,5 @@ class Ordenacao:
         resultado.extend(esquerda[i:])
         resultado.extend(direita[j:])
         return resultado
+    
+    
