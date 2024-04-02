@@ -2,7 +2,6 @@
 class Ordenacao:
     
     ## bubble sort
-    @staticmethod
     def bubble_sort(lista):
         n = len(lista)
         for i in range(n):
