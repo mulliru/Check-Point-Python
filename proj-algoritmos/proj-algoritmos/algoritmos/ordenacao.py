@@ -1,4 +1,3 @@
-#NOSSO ARQUIVOOO PODE FAZER COMMIT 
 
 class Ordenacao:
     
@@ -63,4 +62,14 @@ class Ordenacao:
         resultado.extend(direita[j:])
         return resultado
     
-    
+    ## quick sort
+    @staticmethod
+    def quick_sort(lista):
+        if len(lista) <= 1:
+            return lista
+        else:
+            pivo = lista[0]
+            menor_que_pivo = [x for x in lista[1:] if x <= pivo]
+            maior_que_pivo = [x for x in lista[1:] if x > pivo]
+            
+            return Ordenacao.quick_sort(menor_que_pivo) + [pivo] + Ordenacao.quick_sort(maior_que_pivo)
